@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="search">
+    <mat-form-field class="search-input">
+      <mat-label>Enter Meme Count</mat-label>
+      <input matInput placeholder="Eg. 10" [(ngModel)]="memeCount" />
+    </mat-form-field>
+    <button
+      mat-icon-button
+      color="primary"
+      aria-label="Example icon button with a home icon"
+      class="search-icon"
+      (click)="loadMeme()"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+    <div class="inner-container" *ngFor="let i of urlArray">
+      <app-card [memeUrl]="i"></app-card>
+    </div>
+  </div>
+</div>
