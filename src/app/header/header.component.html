@@ -1,9 +1,22 @@
 <nav id="menu">
   <label>Meme App</label>
   <ul>
-    <li><a routerLink="Memes">Memes</a></li>
     <li>
-      <a routerLink="ProgrammingJokes">Programming Jokes</a>
+      <a routerLink="Memes" *ngIf="isAuthenticated()">Memes</a>
+    </li>
+    <li>
+      <a routerLink="ProgrammingJokes" *ngIf="isAuthenticated()"
+        >Programming Jokes</a
+      >
+    </li>
+    <li>
+      <a routerLink="SignUp" *ngIf="!isAuthenticated()">SignUp</a>
+    </li>
+    <li>
+      <a routerLink="Login" *ngIf="!isAuthenticated()">Login</a>
+    </li>
+    <li>
+      <a routerLink="Logout" *ngIf="isAuthenticated()">Logout</a>
     </li>
   </ul>
 </nav>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="signup-form">
+    <label>Name :</label>
+    <input [(ngModel)]="user.name" type="text" />
+    <br />
+    <label>Email :</label>
+    <input type="email" [(ngModel)]="user.email" />
+    <br />
+    <label>Password :</label>
+    <input type="password" [(ngModel)]="user.password" />
+    <br />
+
+    <!-- <div>
+      <label>Atleast One Uppercase letter</label>
+      <label>Atleast One Number</label>
+      <label>Atleast One Special character</label>
+      <label>Atleast 8 characters</label>
+    </div> -->
+
+    <button (click)="signUp()">Register</button>
+  </div>
+
+  <div *ngIf="isConfirmed" class="validation-form">
+    <label>Validation Code :</label>
+    <input type="text" [(ngModel)]="user.code" />
+    <br />
+    <button (click)="confirmSignUp()">Confirm</button>
+  </div>
+</div>

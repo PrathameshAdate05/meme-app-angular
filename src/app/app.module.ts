@@ -13,6 +13,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../Material.Module';
 import { CardComponent } from './memes/card/card.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,9 @@ import { FormsModule } from '@angular/forms';
     MemesComponent,
     PJokesComponent,
     CardComponent,
+    LoginComponent,
+    SignupComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

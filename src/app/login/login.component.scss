@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form {
+  margin-top: 5rem;
+
+  label {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  input {
+    padding: 5px 5px;
+    margin-left: 5px;
+  }
+
+  button {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    background-color: rgb(17, 224, 69);
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+}

@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CognitoServiceService } from '../../service/cognito-service.service';
+import { HeaderService } from '../header/header-service.service';
 
 @Component({
   selector: 'app-memes',
@@ -7,7 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './memes.component.scss',
 })
 export class MemesComponent {
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private cognitoService: CognitoServiceService,
+    private headerService: HeaderService
+  ) {}
   memeCount = 1;
   url: string = 'https://meme-api.com/gimme';
   urlArray: string[] = [];
